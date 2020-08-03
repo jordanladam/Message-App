@@ -3,7 +3,7 @@ package client.gui;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 
-public class Controller {
+public class ClientGUIController {
 
     @FXML
     public void initialize(){

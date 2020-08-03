@@ -1,4 +1,4 @@
-package servertools;
+package server.servertools;
 
 import java.io.IOException;
 import java.net.ServerSocket;
@@ -6,7 +6,7 @@ import java.net.Socket;
 
 public class Server {
     ServerSender ss;
-    ServerReciever sr;
+    public ServerReciever sr;
     ServerSocket server;
     Socket socket;
 
@@ -25,11 +25,7 @@ public class Server {
         }
     }
 
-    public static void main(String[] args) throws IOException {
-        Server server = new Server(5000, new ServerSender(), new ServerReciever());
-        String message = server.sr.in.readUTF();
-        System.out.println(message);
-    }
+
 
 
 }

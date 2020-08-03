@@ -1,4 +1,4 @@
-package servertools;
+package server.servertools;
 
 import java.io.DataOutputStream;
 import java.io.OutputStream;

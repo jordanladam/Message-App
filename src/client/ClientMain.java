@@ -5,22 +5,18 @@ import client.clienttools.ClientReceiver;
 import client.clienttools.ClientSender;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
-import servertools.Server;
-import servertools.ServerReciever;
-import servertools.ServerSender;
 
 import java.io.IOException;
 
-public class Main extends Application {
+public class ClientMain extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
         FXMLLoader loader = new FXMLLoader();
-        BorderPane root = (BorderPane)loader.load(getClass().getResource("gui/sample.fxml").openStream());
+        BorderPane root = (BorderPane)loader.load(getClass().getResource("gui/clientgui.fxml").openStream());
         primaryStage.setTitle("Hello World");
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
