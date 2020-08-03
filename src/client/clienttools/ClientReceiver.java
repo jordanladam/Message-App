@@ -1,21 +1,20 @@
-package servertools;
+package client.clienttools;
 
-import java.io.BufferedInputStream;
 import java.io.DataInputStream;
+import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Queue;
 
-public class ServerReciever extends Thread{
+public class ClientReceiver extends Thread{
     DataInputStream in;
     Queue<String> receivedMessages;
 
     public void open(InputStream in) {
-        this.in = new DataInputStream(new BufferedInputStream(in));
+        this.in = (DataInputStream) in;
     }
 
     public void close() throws IOException {
         this.in.close();
     }
-
 }
