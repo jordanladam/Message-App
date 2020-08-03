@@ -1,4 +1,5 @@
 package client.clienttools;
 
-public class ClientSender {
+public class ClientSender extends Thread{
+
 }
