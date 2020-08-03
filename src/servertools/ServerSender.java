@@ -8,6 +8,6 @@ public class ServerSender extends Thread{
     DataOutputStream out;
 
     public void open(OutputStream out) {
-        this.out = (DataOutputStream) out;
+        this.out = new DataOutputStream(out);
     }
 }

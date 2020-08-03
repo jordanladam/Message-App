@@ -10,6 +10,10 @@ import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import servertools.Server;
+import servertools.ServerReciever;
+import servertools.ServerSender;
+
+import java.io.IOException;
 
 public class Main extends Application {
 
@@ -23,9 +27,10 @@ public class Main extends Application {
     }
 
 
-    public static void main(String[] args) {
-        launch(args);
-        Server server = new Server(5000);
+    public static void main(String[] args) throws IOException {
         Client client = new Client(new ClientSender(), new ClientReceiver());
+        client.connectToServer("127.0.0.1", 5000);
+        client.cs.sendMessage("Hi");
+        launch(args);
     }
 }

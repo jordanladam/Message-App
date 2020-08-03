@@ -11,7 +11,7 @@ public class ClientReceiver extends Thread{
     Queue<String> receivedMessages;
 
     public void open(InputStream in) {
-        this.in = (DataInputStream) in;
+        this.in = new DataInputStream(in);
     }
 
     public void close() throws IOException {

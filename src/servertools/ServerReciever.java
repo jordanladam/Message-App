@@ -7,7 +7,7 @@ import java.io.InputStream;
 import java.util.Queue;
 
 public class ServerReciever extends Thread{
-    DataInputStream in;
+    public DataInputStream in;
     Queue<String> receivedMessages;
 
     public void open(InputStream in) {
@@ -16,6 +16,10 @@ public class ServerReciever extends Thread{
 
     public void close() throws IOException {
         this.in.close();
+    }
+
+    public void printMessage(String message){
+        System.out.println(message);
     }
 
 }

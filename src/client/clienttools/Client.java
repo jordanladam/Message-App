@@ -4,16 +4,16 @@ import java.io.IOException;
 import java.net.Socket;
 
 public class Client {
-    ClientSender cs;
-    ClientReceiver cr;
-    Socket socket;
+    public ClientSender cs;
+    public ClientReceiver cr;
+    public Socket socket;
 
     public Client(ClientSender cs, ClientReceiver cr){
         this.cs = cs;
         this.cr = cr;
     }
 
-    private void connectToServer(String address, int port){
+    public void connectToServer(String address, int port){
         try {
             this.socket = new Socket(address, port);
             this.cs.open(socket.getOutputStream());

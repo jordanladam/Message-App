@@ -10,7 +10,7 @@ public class ClientSender extends Thread{
     Queue<String> sentMessages;
 
     public void open(OutputStream out) {
-        this.out = (DataOutputStream) out;
+        this.out = new DataOutputStream(out);
     }
 
     public void sendMessage(String message) throws IOException {
