@@ -9,6 +9,10 @@ public class ClientSender extends Thread{
     DataOutputStream out;
     Queue<String> sentMessages;
 
+    public void run(){
+
+    }
+
     public void open(OutputStream out) {
         this.out = new DataOutputStream(out);
     }

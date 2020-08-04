@@ -17,7 +17,7 @@ public class Client {
         try {
             this.socket = new Socket(address, port);
             this.cs.open(socket.getOutputStream());
-            this.cr.open(System.in);
+            this.cr.open(socket.getInputStream());
         } catch (IOException e) {
             e.printStackTrace();
         }

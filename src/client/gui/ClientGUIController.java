@@ -12,11 +12,16 @@ import java.io.IOException;
 public class ClientGUIController {
 
     Client client;
+    ClientReceiver cr;
+    ClientSender cs;
 
     @FXML
     public void initialize(){
-        this.client = new Client(new ClientSender(), new ClientReceiver());
+        this.cr = new ClientReceiver(client);
+        this.cs = new ClientSender();
+        this.client = new Client(cs, cr);
         this.client.connectToServer("127.0.0.1", 5000);
+        this.cr.start();
     }
 
     @FXML

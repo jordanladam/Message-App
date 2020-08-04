@@ -5,7 +5,7 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 public class Server {
-    ServerSender ss;
+    public ServerSender ss;
     public ServerReciever sr;
     ServerSocket server;
     Socket socket;
